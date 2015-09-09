@@ -1,0 +1,27 @@
+{
+  "manifest_version":2,
+  "name":"cooderImplement",
+  "version":"0.0.1",
+  "description":"当一个用户通过cooder进行CR时，自动定义默认填入项，减少无效输入",
+  "browser_action": {
+    "default_icon": {
+      "16": "images/code-16.png",
+      "48": "images/code-48.png",
+      "128": "images/code-128.png"
+    },
+    "default_title": "cooder助手",
+    "default_popup": "popup.html"
+  },
+  "content_scripts":[{
+    "matches": ["http://cooder.baidu.com/patchnew"],
+    "js":["js/jquery-1.9.0.min.js","js/cooder.js"],
+    "all_frames":true
+  }],
+  "permissions":["localstorage"],
+  "options_page":"popup.html",
+  "background": {
+    "scripts":[
+      "js/background.js"
+    ]
+  }
+}
