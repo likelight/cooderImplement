@@ -2,21 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-
+    <title>cooder插件配置</title>
+    <style type="text/css">
+        h4 {
+          font-size: 24px;
+          padding: 0;
+          margin-bottom: 10px;
+        }
+        label {
+          margin-bottom: 20px;
+          font-size: 16px;
+          font-weight: 100px;
+        }
+        .panel-sinan {
+           margin-bottom: 20px;
+        }
+        .version {
+          margin-bottom: 15px;
+        }
+        .panel-sinan label {
+          font-weight: bold;
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+        .panel-sinan button {
+          padding: 5px 10px;
+          margin-left: 255px;
+          background-color: #fff;
+          color: #000;
+        }
+        .svn_url {
+          width: 300px;
+        }
+    </style>
 </head>
 <body>
-  <h4>cooder插件</h4>
+  <h4>cooder插件配置</h4>
+  <label>选择当前需要设置的版本：</label>  
+  <div id="version" class="version">
+    
+  </div>
+  <label>提交新版本：</label>
   <div>
-      <label for="svn_title">请输入cooder标题</label>
-      <input type="text" id="svn_title" name="svn_title"/>
-      <label for="svn_url">请输入cooder常用svn路径</label>
-      <input type="text" id="svn_url" name="svn_url"/>
-      <label for="svn_comment">请输入通用评论</label>
-      <input type="text" id="svn_comment" name="svn_comment"/>
-      <label for="svn_reader">请输入代码评审者</label>
-      <input type="text" id="svn_reader" name="svn_reader"/>
-      <button id="submit">确认</button>
+      <div class="panel-sinan">
+        <label for="">司南版本:</label>
+        <input type="text" id="sinan_version" name="sinan_version"/> 
+      </div> 
+      <div class="panel-sinan">
+        <label for="svn_title">请输入cooder标题:</label>
+        <input type="text" id="svn_title" name="svn_title"/>
+      </div>
+      <div class="panel-sinan">
+        <label for="svn_url">请输入cooder常用svn路径:</label>
+        <input type="text" id="svn_url" name="svn_url" class="svn_url" />
+      </div>
+      <div class="panel-sinan">
+        <label for="svn_comment">请输入通用评论:</label>
+        <input type="text" id="svn_comment" name="svn_comment"/>
+      </div>
+      <div class="panel-sinan">
+        <label for="svn_reader">请输入代码评审者: 如（ruanshimin@baidu.com）</label>
+        <input type="text" id="svn_reader" name="svn_reader"/>
+      </div>
+      <div class="panel-sinan">
+        <button id="submit">添加</button>
+      </div>
+      
       <script src="js/jquery-1.9.0.min.js"></script>
       <script src="js/submit.js"></script>
   </div>
